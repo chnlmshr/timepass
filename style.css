@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  width: 95vw;
+  height: 95vh;
+}
+
+#man {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-name: walk;
+  animation-direction: alternate;
+}
+
+#man div {
+  border: 2px solid black;
+}
+
+#head {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+}
+
+#mid {
+  height: 250px;
+  width: 150px;
+  border-radius: 50px;
+} 
+
+#man #legs {
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 150px;
+}
+
+#leftleg, #rightleg{
+  height: 250px;
+  width: 30px;
+  border-radius: 30%;
+}
+
+#leftleg {
+  animation-duration: 1s;
+  animation-name: legmove;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+  animation-delay: .5s;
+}
+
+#rightleg {
+  animation-duration: 1s;
+  animation-name: legmove;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+}
+
+@keyframes walk {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 80%;
+  }
+}
+
+@keyframes legmove {
+  from {
+    transform: rotate(0deg);
+    transform-origin: top left;
+  }
+  to {
+    transform: rotate(-10deg);
+    transform-origin: top left;
+  }
+}

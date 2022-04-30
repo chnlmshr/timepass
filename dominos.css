@@ -1,0 +1,102 @@
+body {
+  background-color: black;
+}
+
+#dominos {
+  height: 95vh;
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(70deg) scale(-.4);
+  /* animation: drop 10s ease 2 alternate; */
+}
+
+.domino {
+  display: flex;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation: drop 60s ease infinite alternate;
+}
+
+.domino div {
+  border: 2px solid black;
+  background-color: silver;
+}
+
+.face {
+  width: 100px;
+  height: 300px;
+  transform: skewY(-45deg);
+}
+
+.side {
+  width: 5px;
+  height: 300px;
+  position: relative;
+  top: 52px;
+}
+
+.top {
+  width: 183.5px;
+  height: 5px;
+  transform: rotate3d(0,1,1,-54.8deg);
+  position: relative;
+  left: 150px;
+  bottom: 5px;
+}
+
+#dominos :hover{
+  animation: drop 10s ease infinite alternate;
+}
+
+#dominos .domino :hover {
+  animation: none;
+}
+
+#dominos :nth-child(1) :hover{
+  background-color: aqua;
+}
+
+#dominos :nth-child(2) :hover {
+  background-color: gold;
+}
+
+#dominos :nth-child(3) :hover {
+  background-color: orange;
+}
+
+#dominos :nth-child(4) :hover {
+  background-color: pink;
+}
+
+#dominos :nth-child(5) :hover {
+  background-color: violet;
+}
+
+#dominos :nth-child(1){
+  animation-delay: 1s;
+}
+#dominos :nth-child(2){
+  animation-delay: 2s;
+}
+#dominos :nth-child(3){
+  animation-delay: 3s;
+}
+#dominos :nth-child(4){
+  animation-delay: 4s;
+}
+#dominos :nth-child(5){
+  animation-delay: 5s;
+}
+
+@keyframes drop {
+  from {
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+  }
+  to {
+    transform: rotate(1000deg);
+    transform-origin: bottom left;
+  }
+}

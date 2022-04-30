@@ -1,0 +1,134 @@
+body {
+  display: flex;
+  width: 95vw;
+  height: 95vh;
+}
+
+#car {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation-duration: 3s;
+  /* animation-iteration-count: 2; */
+  animation-name: move;
+  /* animation-direction: alternate; */
+  transform: scale(.5);
+  animation-timing-function: ease;
+}
+
+#car div {
+  border: 2px solid rgb(103, 103, 207);
+  background-color: rgb(93, 93, 233);
+  border-radius: 10px;
+}
+
+#car #top {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  width: 583px;
+  border: none;
+  background-color: white;
+}
+
+#car #roof {
+  width: 200px;
+  height: 100px;
+  border-color: black;
+  z-index: 2;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#top #frontsheild, #top #backsheild {
+  width: 141.4px;
+  height: 141.4px;
+  position: relative;
+  top: 3px;
+  background-color: rgb(41, 41, 41);
+}
+
+#top #frontsheild {
+  left: 43px;
+  transform: rotate(44deg);
+  transform-origin: bottom left;
+  border-left-color: black;
+}
+
+#top #backsheild {
+  right: 43px;
+  transform: rotate(-44deg);
+  transform-origin: bottom right;
+  border-right-color: black;
+}
+
+#bottom #leftwheel, #bottom #rightwheel {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 3s;
+  /* animation-iteration-count: 2; */
+  animation-name: wheels;
+  /* animation-direction: alternate; */
+  position: relative;
+  top: 50px;
+  border-color: black;
+}
+
+/* #leftwheel {
+  transform: rotate(90deg);
+  transform-origin: bottom left;
+} */
+
+#car #bottom {
+  display: flex;
+  height: 100px;
+  width: 400px;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: none;
+  border-color: black;
+  z-index: 2;
+} 
+
+/* #rightwheel {
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+} */
+
+#bottom .wheelstick1, #bottom .wheelstick2 {
+  position: absolute;
+  border-color: black;
+}
+
+.wheelstick1 {
+  width: 50px;
+  height: 1px;
+}
+
+.wheelstick2 {
+  width: 1px;
+  height: 50px;
+}
+
+@keyframes move {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 70%;
+  }
+}
+
+@keyframes wheels {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
