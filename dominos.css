@@ -3,12 +3,12 @@ body {
 }
 
 #dominos {
-  height: 95vh;
-  width: 95vw;
+  height: 75vh;
+  width: 110vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: rotate(70deg) scale(-.4);
+  transform: scale(.5);
   /* animation: drop 10s ease 2 alternate; */
 }
 
@@ -16,7 +16,8 @@ body {
   display: flex;
   animation-iteration-count: 2;
   animation-direction: alternate;
-  animation: drop 60s ease infinite alternate;
+  animation: drop 10s ease infinite alternate;
+  position: absolute;
 }
 
 .domino div {
@@ -46,48 +47,145 @@ body {
   bottom: 5px;
 }
 
-#dominos :hover{
-  animation: drop 10s ease infinite alternate;
+#dominos :nth-child(1) .side, #dominos :nth-child(1) .top{
+  background-color: rgb(175, 255, 255);
 }
 
-#dominos .domino :hover {
-  animation: none;
+#dominos :nth-child(2) .side, #dominos :nth-child(2) .top {
+  background-color: rgb(255, 243, 173);
 }
 
-#dominos :nth-child(1) :hover{
-  background-color: aqua;
+#dominos :nth-child(3) .side, #dominos :nth-child(3) .top {
+  background-color: rgb(255, 225, 171);
 }
 
-#dominos :nth-child(2) :hover {
-  background-color: gold;
+#dominos :nth-child(4) .side, #dominos :nth-child(4) .top {
+  background-color: rgb(255, 167, 182);
 }
 
-#dominos :nth-child(3) :hover {
-  background-color: orange;
+#dominos :nth-child(5) .side, #dominos :nth-child(5) .top {
+  background-color: rgb(255, 173, 255);
 }
 
-#dominos :nth-child(4) :hover {
-  background-color: pink;
+#dominos :nth-child(6) .side, #dominos :nth-child(6) .top {
+  background-color:rgb(255, 255, 176);
 }
 
-#dominos :nth-child(5) :hover {
-  background-color: violet;
+#dominos :nth-child(7) .side, #dominos :nth-child(7) .top {
+  background-color: rgb(220, 185, 255);
+}
+
+#dominos :nth-child(8) .side, #dominos :nth-child(8) .top {
+  background-color: rgb(222, 255, 173);
+}
+
+#dominos :nth-child(9) .side, #dominos :nth-child(9) .top {
+  background-color: rgb(255, 174, 174);
+}
+
+#dominos :nth-child(10) .side, #dominos :nth-child(10) .top {
+  background-color: rgb(185, 255, 253);
+}
+
+#dominos :nth-child(11) .side, #dominos :nth-child(11) .top {
+  background-color:rgb(255, 255, 175);
+}
+
+#dominos :nth-child(12) .side, #dominos :nth-child(12) .top {
+  background-color: rgb(214, 172, 255);
+}
+
+#dominos :nth-child(13) .side, #dominos :nth-child(13) .top {
+  background-color: rgb(220, 255, 167);
+}
+
+#dominos :nth-child(14) .side, #dominos :nth-child(14) .top {
+  background-color: rgb(255, 180, 180);
+}
+
+#dominos :nth-child(15) .side, #dominos :nth-child(15) .top {
+  background-color: rgb(187, 255, 253);
+}
+
+#dominos :nth-child(16) .side, #dominos :nth-child(16) .top {
+  background-color: rgb(255, 185, 185);
+}
+
+#dominos :nth-child(17) .side, #dominos :nth-child(17) .top {
+  background-color: rgb(184, 255, 253);
+}
+
+#dominos :nth-child(18) .side, #dominos :nth-child(15) .top {
+  background-color: rgb(185, 255, 253);
+}
+
+#dominos :nth-child(19) .side, #dominos :nth-child(16) .top {
+  background-color: rgb(255, 194, 194);
+}
+
+#dominos :nth-child(20) .side, #dominos :nth-child(17) .top {
+  background-color: rgb(183, 255, 253);
 }
 
 #dominos :nth-child(1){
-  animation-delay: 1s;
+  animation-delay: .1s;
 }
 #dominos :nth-child(2){
-  animation-delay: 2s;
+  animation-delay: .2s;
 }
 #dominos :nth-child(3){
-  animation-delay: 3s;
+  animation-delay: .3s;
 }
 #dominos :nth-child(4){
-  animation-delay: 4s;
+  animation-delay: .4s;
 }
 #dominos :nth-child(5){
-  animation-delay: 5s;
+  animation-delay: .5s;
+}
+#dominos :nth-child(6){
+  animation-delay: .6s;
+}
+#dominos :nth-child(7){
+  animation-delay: .7s;
+}
+#dominos :nth-child(8){
+  animation-delay: .8s;
+}
+#dominos :nth-child(9){
+  animation-delay: .9s;
+}
+#dominos :nth-child(10){
+  animation-delay: 1s;
+}
+#dominos :nth-child(11){
+  animation-delay: 1.1s;
+}
+#dominos :nth-child(12){
+  animation-delay: 1.2s;
+}
+#dominos :nth-child(13){
+  animation-delay: 1.3s;
+}
+#dominos :nth-child(14){
+  animation-delay: 1.4s;
+}
+#dominos :nth-child(15){
+  animation-delay: 1.5s;
+}
+#dominos :nth-child(16){
+  animation-delay: 1.6s;
+}
+#dominos :nth-child(17){
+  animation-delay: 1.7s;
+}
+#dominos :nth-child(18){
+  animation-delay: 1.8s;
+}
+#dominos :nth-child(19){
+  animation-delay: 1.9s;
+}
+#dominos :nth-child(20){
+  animation-delay: 2s;
 }
 
 @keyframes drop {
